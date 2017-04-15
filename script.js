@@ -12,26 +12,35 @@ new Vue({
         gameStatus: false
     },
     methods: {
-        begin: function(){
-            this.gameStatus= true;
+        begin: function () {
+            this.gameStatus = true;
             this.playerHealth = 100;
             this.cpuHealth = 100;
         },
         attack: function () {
-            if (this.cpuHealth > 0) {
-                let damage = getRandomInt(5, 15)
-                this.cpuHealth -= damage;
-                console.log("CPU LOST " + damage + " points");
-                if (this.playerHealth > 0) {
-                    let damage2 = getRandomInt(5, 15);
-                    this.playerHealth -= damage2;
-                    console.log("YOU LOST " + damage2 + " points");
-                } else {
-                    alert("YOU LOST NIGGA");
-                }
-            } else {
-                alert("YOU WIN");
+            let cpuDamage = getRandomInt(3, 10);
+            this.cpuHealth -= cpuDamage;
+            if (this.cpuHealth <= 0) {
+                alert("YOU WON!");
+                this.gameStatus = false;
+                return;
             }
+            let playerDamage = getRandomInt(5, 12);
+            this.playerHealth -= playerDamage;
+            if(this.playerHealth <= 0){
+                alert("You're a loser");
+                this.gameStatus = false;
+            }
+
+        },
+        spl: function () {
+
+        },
+        heal: function () {
+
+        },
+        quit: function () {
+
         }
     }
 });
