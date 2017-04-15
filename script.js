@@ -23,7 +23,14 @@ new Vue({
 
         },
         spl: function () {
-
+            let cpuDamage = this.getRandomInt(10, 20);
+            this.cpuHealth -= cpuDamage;
+            if (this.winStatus()) {
+                return;
+            }
+            let playerDamage = this.getRandomInt(5, 12);
+            this.playerHealth -= playerDamage;
+            this.winStatus();
         },
         heal: function () {
 
