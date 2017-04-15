@@ -14,6 +14,8 @@ new Vue({
     methods: {
         begin: function(){
             this.gameStatus= true;
+            this.playerHealth = 100;
+            this.cpuHealth = 100;
         },
         attack: function () {
             if (this.cpuHealth > 0) {

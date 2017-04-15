@@ -26,10 +26,13 @@
         </div>
         <div id="ground-2">
             <div id="menu1" v-if="!gameStatus">
-                <button @click="begin" v-if="!gameStatus">New Game</button>
+                <button @click="begin">New Game</button>
             </div>
             <div id="menu2" v-else>
-                <button @click="attack" v-if="gameStatus">Attack</button>
+                <button @click="attack">Attack</button>
+                <button @click="attack">Special Move</button>
+                <button @click="attack">Heal</button>
+                <button @click="attack">Quit</button>
             </div>
         </div>
         <div id="ground-3">
