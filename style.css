@@ -1,0 +1,13 @@
+#ground-1{
+    display: flex;
+    flex-direction: row;
+}
+
+#player,#cpu,#menu{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menu{
+    margin-top: 20px;
+}

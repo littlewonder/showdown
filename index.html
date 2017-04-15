@@ -1,10 +1,34 @@
 <html>
-    <head>
-        <title>ShowDown</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="vue.js"></script>
-    </head>
-    <body>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <title>ShowDown</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="ground">
+        <div id="ground-1">
+            <div id="player">
+                <h2>Player</h2>
+                <p>{{playerHealth}}</p>
+            </div>
+            <div id="cpu">
+                <h2>CPU</h2>
+                <p>{{cpuHealth}}</p>
+            </div>
+        </div>
+        <div id="ground-2">
+            <div id="menu">
+                <button @click="reload">New Game</button>
+                <button @click="attack">Attack</button>
+            </div>
+            <div id="comm">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
