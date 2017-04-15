@@ -29,7 +29,7 @@ new Vue({
             this.cpuAttacks();
         },
         quit: function () {
-
+            this.gameStatus = false;
         },
         getRandomInt: function (min, max) {
             min = Math.ceil(min);
