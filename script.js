@@ -11,6 +11,7 @@ new Vue({
             this.gameStatus = true;
             this.playerHealth = 100;
             this.cpuHealth = 100;
+            this.comments = [];
         },
         attack: function () {
             this.playerAttacks(3, 10);
@@ -26,6 +27,10 @@ new Vue({
             } else {
                 this.playerHealth = 100;
             }
+            this.comments.unshift({
+                isPlayer: true,
+                text: 'Player Healed'
+            });
             this.cpuAttacks();
         },
         quit: function () {
