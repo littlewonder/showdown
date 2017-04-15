@@ -12,25 +12,13 @@ new Vue({
             this.cpuHealth = 100;
         },
         attack: function () {
-            let cpuDamage = this.getRandomInt(3, 10);
-            this.cpuHealth -= cpuDamage;
-            if (this.winStatus()) {
-                return;
-            }
-            let playerDamage = this.getRandomInt(5, 12);
-            this.playerHealth -= playerDamage;
-            this.winStatus();
+            this.playerAttacks(3,10);
+            this.cpuAttacks();
 
         },
         spl: function () {
-            let cpuDamage = this.getRandomInt(10, 20);
-            this.cpuHealth -= cpuDamage;
-            if (this.winStatus()) {
-                return;
-            }
-            let playerDamage = this.getRandomInt(5, 12);
-            this.playerHealth -= playerDamage;
-            this.winStatus();
+            this.playerAttacks(10,20);
+            this.cpuAttacks();
         },
         heal: function () {
 
@@ -60,6 +48,18 @@ new Vue({
                 return true;
             }
             return false;
+        },
+        cpuAttacks: function(){
+            let playerDamage = this.getRandomInt(5, 12);
+            this.playerHealth -= playerDamage;
+            this.winStatus();
+        },
+        playerAttacks: function(x,y){
+            let cpuDamage = this.getRandomInt(x,y);
+            this.cpuHealth -= cpuDamage;
+            if (this.winStatus()) {
+                return;
+            }
         }
     }
 });
