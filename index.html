@@ -12,22 +12,28 @@
             <div id="player">
                 <h2>Player</h2>
                 <p>{{playerHealth}}</p>
-                <div class="parentbar"><div class="health" :style="{width: playerHealth + 'px'}"></div></div>
+                <div class="parentbar">
+                    <div class="health" :style="{width: playerHealth + 'px'}"></div>
+                </div>
             </div>
             <div id="cpu">
                 <h2>CPU</h2>
                 <p>{{cpuHealth}}</p>
-                <div class="parentbar"><div class="health" :style="{width: cpuHealth + 'px'}"></div></div>
+                <div class="parentbar">
+                    <div class="health" :style="{width: cpuHealth + 'px'}"></div>
+                </div>
             </div>
         </div>
         <div id="ground-2">
-            <div id="menu">
-                <button @click="reload">New Game</button>
-                <button @click="attack">Attack</button>
+            <div id="menu1" v-if="!gameStatus">
+                <button @click="begin" v-if="!gameStatus">New Game</button>
             </div>
-            <div id="comm">
-                <p></p>
+            <div id="menu2" v-else>
+                <button @click="attack" v-if="gameStatus">Attack</button>
             </div>
+        </div>
+        <div id="ground-3">
+
         </div>
     </div>
     <script src="script.js"></script>

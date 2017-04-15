@@ -8,12 +8,12 @@ new Vue({
     el: '#ground',
     data: {
         playerHealth: 100,
-        cpuHealth: 100
+        cpuHealth: 100,
+        gameStatus: false
     },
     methods: {
-        reload: function () {
-            let temp = window.location.href;
-            window.location = temp;
+        begin: function(){
+            this.gameStatus= true;
         },
         attack: function () {
             if (this.cpuHealth > 0) {

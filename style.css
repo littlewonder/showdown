@@ -3,12 +3,12 @@
     flex-direction: row;
 }
 
-#player,#cpu,#menu{
+#player,#cpu,#menu1,#menu2{
     margin: 0 auto;
     text-align: center;
 }
 
-#menu{
+#menu1,#menu2{
     margin-top: 20px;
 }
 
