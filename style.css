@@ -11,3 +11,13 @@
 #menu{
     margin-top: 20px;
 }
+
+.parentbar{
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+}
+.health{
+    height: 30px;
+    background-color: limegreen;
+}

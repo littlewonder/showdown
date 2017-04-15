@@ -12,10 +12,12 @@
             <div id="player">
                 <h2>Player</h2>
                 <p>{{playerHealth}}</p>
+                <div class="parentbar"><div class="health" :style="{width: userwidth + 'px'}"></div></div>
             </div>
             <div id="cpu">
                 <h2>CPU</h2>
                 <p>{{cpuHealth}}</p>
+                <div class="parentbar"><div class="health" :style="{width: cpuwidth + 'px'}"></div></div>
             </div>
         </div>
         <div id="ground-2">
