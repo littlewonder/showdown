@@ -152,3 +152,16 @@ button:focus {
     text-align: center;
     color: darkgrey;
 }
+
+.cpucom{
+    list-style: none;
+    text-align: center;
+    color: red;
+}
+
+.usrcom{
+    list-style: none;
+    text-align: center;
+    color: green;
+    margin-bottom: 10px;
+}
