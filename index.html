@@ -2,10 +2,10 @@
 
 <head>
     <title>ShowDown</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <script src="js/vue.js"></script>
 </head>
-
 <body>
     <div id="ground">
         <div id="ground-1">
@@ -26,13 +26,23 @@
         </div>
         <div id="ground-2">
             <div id="menu1" v-if="!gameStatus">
-                <button @click="begin">New Game</button>
+                <button @click="begin" id="btn00" class="hvr-shutter-in-horizontal">New Game</button>
+                <br>
+                <button id="btn01" @click="trigger= !trigger">How to Play</button>
+                                <div id="rules" v-if="trigger">
+                    <ul>
+                        <li>Pressing the attack button yields a random damage ranging between 3 and 10 points</li>
+                        <li>The CPU can cause damage between 5 and 12 points</li>
+                        <li>Special Attack results in damage of 10-20 points</li>
+                        <li>You can heal yourself by pressing heal button which will regain the health by 10</li>
+                    </ul>
+                </div>
             </div>
             <div id="menu2" v-else>
-                <button @click="attack">Attack</button>
-                <button @click="spl">Special Move</button>
-                <button @click="heal">Heal</button>
-                <button @click="quit">Quit</button>
+                <button @click="attack" id="btn02" class="btn">Attack</button>
+                <button @click="spl" id="btn03" class="btn">Special Move</button>
+                <button @click="heal" id="btn04" class="btn">Heal</button>
+                <button @click="quit" id="btn05" class="btn">Quit</button>
             </div>
         </div>
         <div id="ground-3">

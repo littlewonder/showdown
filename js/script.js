@@ -4,7 +4,8 @@ new Vue({
         playerHealth: 100,
         cpuHealth: 100,
         gameStatus: false,
-        comments: []
+        comments: [],
+        trigger: false
     },
     methods: {
         begin: function () {
