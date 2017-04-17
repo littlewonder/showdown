@@ -63,11 +63,11 @@ new Vue({
         cpuAttacks: function () {
             let playerDamage = this.getRandomInt(5, 12);
             this.playerHealth -= playerDamage;
+            this.winStatus();
             this.comments.unshift({
                 isPlayer: false,
                 text: 'Player lost ' + playerDamage + ' points'
             });
-            this.winStatus();
         },
         playerAttacks: function (x, y) {
             let cpuDamage = this.getRandomInt(x, y);
