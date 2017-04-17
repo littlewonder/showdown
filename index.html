@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="ground">
-        <div id="title">SHOWDOWN</div>
-        <div id="ground-1">
+        <div id="title" v-if="!gameStatus">SHOWDOWN</div>
+        <div id="ground-1" v-else>
             <div id="player">
                 <h2>Player</h2>
                 <p>{{playerHealth}}</p>
