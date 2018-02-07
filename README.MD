@@ -2,4 +2,4 @@
 
 2D Game Using Vue.js
 
-[Live Demo](http://abhisheksharma.design/showdown/)
+[Live Demo](http://littlewonder.github.io/showdown/)
